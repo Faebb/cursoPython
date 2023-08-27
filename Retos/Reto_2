@@ -1,0 +1,40 @@
+#Indice de masa corporal
+def convertir_libras_a_kg(peso_lb:float)->float:
+    return peso_lb * 0.45
+
+def convertir_pulgadas_a_metros(altura_inch:float)->float:
+    return altura_inch * 0.025
+
+def calcular_BMI(peso_lb:float, altura_inch:float)->float:
+    peso_kg = convertir_libras_a_kg(peso_lb)
+    altura_m = convertir_pulgadas_a_metros(altura_inch)
+    bmi = peso_kg / (altura_m ** 2)
+    return round(bmi, 2)
+
+# Ejemplo de uso
+peso_libras = float(input("Ingrese el peso en libras: "))
+altura_pulgadas = float(input("Ingrese la altura en pulgadas: "))
+
+bmi = calcular_BMI(peso_libras, altura_pulgadas)
+print("El índice de masa corporal (BMI) es:"+str(bmi))
+
+"""USADO EN EL RETO
+def convertir_libras_a_kg(peso_lb:float)->float:
+    return peso_lb * 0.45
+
+def convertir_pulgadas_a_metros(altura_inch:float)->float:
+    return altura_inch * 0.025
+
+def calcular_BMI(peso_lb:float, altura_inch:float)->float:
+    peso_kg = convertir_libras_a_kg(peso_lb)
+    altura_m = convertir_pulgadas_a_metros(altura_inch)
+    bmi = peso_kg / (altura_m ** 2)
+    return round(bmi, 2)
+
+# Ejemplo de uso
+peso_libras = 120
+altura_pulgadas = 74
+
+bmi = calcular_BMI(peso_libras, altura_pulgadas)
+print("El índice de masa corporal (BMI) es:"+str(bmi))
+"""

@@ -1,0 +1,13 @@
+def calcular_cambio(cambio:int)->str:
+    monedas_500 = cambio // 500
+    cambio %= 500
+    monedas_200 = cambio // 200
+    cambio %= 200
+    monedas_100 = cambio // 100
+    cambio %= 100
+    monedas_50 = cambio // 50
+    
+    return str(monedas_500)+","+ str(monedas_200)+","+ str(monedas_100)+","+str(monedas_50)
+
+ejemplo_cambio = 500
+print(calcular_cambio(ejemplo_cambio))
